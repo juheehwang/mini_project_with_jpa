@@ -1,0 +1,1 @@
+insert into category(category_name,display,deleted) values('동물',0,0)
