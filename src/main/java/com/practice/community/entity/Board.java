@@ -10,4 +10,6 @@ public class Board {
     private boolean display;
     private boolean deleted;
 
+
+
 }
