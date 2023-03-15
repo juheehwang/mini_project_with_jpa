@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -12,6 +13,8 @@ import java.util.List;
 @Getter @Setter
 public class Post {
 
+    @Id @GeneratedValue
+    @Column(name = "post_id")
     private Long id;
     private Long boardId;
     private String title;
@@ -19,5 +22,5 @@ public class Post {
 
     private boolean deleted;
     @OneToMany(mappedBy = "post",cascade = CascadeType.ALL)
-    private List<File> fileList;
+    private List<File> fileList = new ArrayList<>();
 }
